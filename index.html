@@ -5,49 +5,51 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <title>Calculadora Web</title>
 </head>
 <body>
     <div class="container">
-        <div class="mostrador">
-            <input type="text" id="caja" placeholder=" 0">
-            <input type="text" id="cajaAyuda" style="display: none;">
-        </div>
-        <div class="content">
-            <div class="content-number-1">
-                <div class="number" id="button7">7</div>
-                <div class="number" id="button8">8</div>
-                <div class="number" id="button9">9</div>
+        <form action="" name="form">
+            <div class="mostrador">
+                <input type="text" id="caja" placeholder=" 0">
+                <input type="text" id="cajaAyuda" style="display: none;">
+            </div>    
+            <div class="content">
+                <div class="content-number-1">
+                    <input type="button" class="number" value="7" onclick="document.form.caja.value+='7'" id="button7"/>
+                    <input type="button" class="number" value="8" onclick="document.form.caja.value+='8'" id="button8"/>
+                    <input type="button" class="number" value="9" onclick="document.form.caja.value+='9'" id="button9"/>
+                </div>
+                <div class="content-number-2">
+                    <input type="button" class="number" value="4" onclick="document.form.caja.value+='4'" id="button4"/>
+                    <input type="button" class="number" value="5" onclick="document.form.caja.value+='5'" id="button5"/>
+                    <input type="button" class="number" value="6" onclick="document.form.caja.value+='6'" id="button6"/>
+                </div>
+                <div class="content-number-3">
+                    <input type="button" class="number" value="1" onclick="document.form.caja.value+='1'" id="button1"/>
+                    <input type="button" class="number" value="2" onclick="document.form.caja.value+='2'" id="button2"/>
+                    <input type="button" class="number" value="3" onclick="document.form.caja.value+='3'" id="button3"/>
+                </div>
+                <div class="content-number-4">
+                    <input type="button" class="number" value="+" onclick="document.form.caja.value+='+'" id="buttonSumar"/>
+                    <input type="button" class="number" value="0" onclick="document.form.caja.value+='0'" id="button0"/>
+                    <input type="button" class="number" value="-" onclick="document.form.caja.value+='-'" id="buttonRestar"/>
+                </div>
+                <div class="content-number-5">
+                    <input type="button" class="number" value="*" onclick="document.form.caja.value+='*'" id="buttonMultiplicar"/>
+                    <input type="button" class="number" value="/" onclick="document.form.caja.value+='/'" id="buttonDividir"/>
+                    <input type="button" class="number" value="=" onclick="buttons()" id="buttonResultado"/>
+                </div>
             </div>
-            <div class="content-number-2">
-                <div class="number" id="button4">4</div>
-                <div class="number" id="button5">5</div>
-                <div class="number" id="button6">6</div>
-            </div>
-            <div class="content-number-3">
-                <div class="number" id="button1">1</div>
-                <div class="number" id="button2">2</div>
-                <div class="number" id="button3">3</div>
-            </div>
-            <div class="content-number-4">
-                <div class="number" id="buttonSumar">+</div>
-                <div class="number" id="button0">0</div>
-                <div class="number" id="buttonRestar">-</div>
-            </div>
-            <div class="content-number-5">
-                <div class="number" id="buttonMultiplicar">*</div>
-                <div class="number" id="buttonDividir">/</div>
-                <div class="number" id="buttonResultado">=</div>
-            </div>
-        </div>
+        </form>
     </div>
     <div class="resultado" id="content-result">
-        <div class="titulo">
+        <div class="titulo" id="titulo">
             <p>Historial</p>
         </div>
+        <div id="resu"></div>
     </div>
     <div class="clone" id="clone"></div>
-    <script src="js/script.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>
